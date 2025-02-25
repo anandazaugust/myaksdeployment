@@ -39,6 +39,15 @@ jobs:
         with:
           kubelogin-version: 'v0.0.25'
 
-
-
-
+      - name: Azure CLI Action
+        uses: Azure/cli@v2.1.0
+        with:
+          # Specify the script here
+          inlineScript: 
+            az aks command invoke \
+              --resource-group rg-mylabmylabuksouthp-example \
+              --name aksfeb25 \
+              --command "kubectl get pods"
+        
+                
+    
