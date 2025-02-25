@@ -50,5 +50,5 @@ jobs:
         with:
             # Specify the script here
             inlineScript: 
-              az aks command invoke --resource-group rg-mylabmylabuksouthp-example --name aksfeb25 --command "kubectl apply -f ./abc.yaml -n default" --file ./abc.yml     
+              az aks command invoke --resource-group rg-mylabmylabuksouthp-example --name aksfeb25 --command "kubectl apply -f ./abc.yml -n default" --file ./abc.yml     
     
