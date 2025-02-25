@@ -1,0 +1,25 @@
+
+        
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginxd4s
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginxd4s
+  template:
+    metadata:
+      labels:
+        app: nginxd4s
+    spec:
+      containers:
+      - name: ngin
+    
+        image: nginx
+
+
+
+        
+             
