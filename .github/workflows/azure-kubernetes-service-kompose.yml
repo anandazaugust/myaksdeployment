@@ -44,10 +44,7 @@ jobs:
         with:
           # Specify the script here
           inlineScript: 
-            az aks command invoke \
-              --resource-group rg-mylabmylabuksouthp-example \
-              --name aksfeb25 \
-              --command "kubectl get pods"
+            az aks command invoke --resource-group rg-mylabmylabuksouthp-example --name aksfeb25 --command "kubectl get pods"
         
                 
     
