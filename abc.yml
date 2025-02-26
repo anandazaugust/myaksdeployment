@@ -17,7 +17,7 @@ spec:
       containers:
       - name: ngin
     
-        image: #{IMAGE_NAME}#
+        image: ${{{inputs.choose-image}}
 
 
 
