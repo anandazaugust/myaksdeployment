@@ -7,15 +7,14 @@ on:
     branches: ["main"]
   workflow_dispatch:
    inputs:
-     choose-image:
+     IMAGE_NAME:
        description: choose the image
        type: string
        required: true
        default: nginx
       
          
-# env:
-#   AZURE_CONTAINER_REGISTRY: "your-azure-container-registry"
+  
 #   CONTAINER_NAME: "your-container-name"
 #   RESOURCE_GROUP: "your-resource-group"
 #   CLUSTER_NAME: "your-cluster-name"
