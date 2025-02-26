@@ -45,7 +45,11 @@ jobs:
         uses: azure/use-kubelogin@v1
         with:
           kubelogin-version: 'v0.0.25'
-
+      - name: script to replace image
+        run: |
+            sed -i "s|#{IMAGE_NAME}#|$(IMAGE_NAME)|g" abc.yml
+   
+      
       
       - name: deploy to akks
         uses: Azure/cli@v2.1.0
