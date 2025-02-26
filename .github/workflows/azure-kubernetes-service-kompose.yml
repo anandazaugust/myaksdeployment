@@ -6,7 +6,14 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
-
+   inputs:
+     choose-image:
+       description: choose the image
+       type: string
+       required: true
+       default: nginx
+      
+         
 # env:
 #   AZURE_CONTAINER_REGISTRY: "your-azure-container-registry"
 #   CONTAINER_NAME: "your-container-name"
