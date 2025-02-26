@@ -46,16 +46,16 @@ jobs:
         with:
           kubelogin-version: 'v0.0.25'
 
-      - name: list the kubes
-        uses: Azure/cli@v2.1.0
-        with:
-          # Specify the script here
-          inlineScript: 
-            az aks command invoke --resource-group rg-mylabmylabuksouthp-example --name aksfeb26 --command "kubectl get pods"
+      
       - name: deploy to akks
         uses: Azure/cli@v2.1.0
         with:
             # Specify the script here
             inlineScript: 
               az aks command invoke --resource-group rg-mylabmylabuksouthp-example --name aksfeb26 --command "kubectl apply -f ./abc.yml -n default" --file ./abc.yml     
-    
+      - name: list the kubes
+        uses: Azure/cli@v2.1.0
+        with:
+            # Specify the script here
+            inlineScript: 
+              az aks command invoke --resource-group rg-mylabmylabuksouthp-example --name aksfeb26 --command "kubectl get pods"
